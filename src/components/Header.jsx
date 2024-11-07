@@ -42,7 +42,7 @@ function Header() {
           {/* Title */}
           <div className="flex flex-col font-bold leading-4 text-sm">
             <span className="ml-2 ">Cooks</span>
-            <spanc className="ml-2 ">Delight</spanc>
+            <span className="ml-2 ">Delight</span>
           </div>
         </div>
         {/* Nav-bar */}
