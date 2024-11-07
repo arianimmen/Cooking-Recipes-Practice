@@ -1,12 +1,14 @@
 import "./tailwind.css";
 import Header from "./components/Header";
+import RandomRecipes from "./components/RandomRecipes";
 
 function App() {
   return (
-    <div className=" bg-orange-50 w-full h-screen">
+    <div className=" bg-orange-50 w-full h-full">
       <div className="container mx-auto p-4">
         <Header />
         <HeroImage />
+        <RandomRecipes />
       </div>
     </div>
   );
@@ -16,7 +18,7 @@ export default App;
 
 function HeroImage() {
   return (
-    <div className="relative">
+    <div className="relative mb-8">
       <div className="absolute flex flex-col items-center mx-auto w-full top-1/4  text-center text-white px-6 ">
         {/* Main Title */}
         <h1 className="text-3xl font-extrabold mb-3 md:text-7xl max-w-[900px]">
