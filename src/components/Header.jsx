@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <div className="p-4">
+    <div className="mb-4">
       <div className="flex justify-between items-center border  rounded-3xl border-zinc-300 p-4">
         {/* Logo and Title */}
         <div className="flex items-center">
