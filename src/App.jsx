@@ -1,6 +1,7 @@
 import "./tailwind.css";
 import Header from "./components/Header";
 import RandomRecipes from "./components/RandomRecipes";
+import FoodCategory from "./components/FoodCategory";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Header />
         <HeroImage />
         <RandomRecipes />
+        <FoodCategory />
       </div>
     </div>
   );
