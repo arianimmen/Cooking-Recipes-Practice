@@ -18,15 +18,15 @@ function FoodCategory() {
       </div>
       {/* Tags */}
       <ul className="flex flex-wrap gap-x-2 gap-y-4 justify-center mb-10">
-        <li className="py-3 px-6 border border-zinc-900 rounded-3xl bg-lime-300">All</li>
-        <li className="py-3 px-6 border border-zinc-900 rounded-3xl">Vegan</li>
-        <li className="py-3 px-6 border border-zinc-900 rounded-3xl">
+        <li className="py-3 px-6 border border-zinc-900 rounded-3xl cursor-pointer bg-lime-300">All</li>
+        <li className="py-3 px-6 border border-zinc-900 rounded-3xl cursor-pointer">Vegan</li>
+        <li className="py-3 px-6 border border-zinc-900 rounded-3xl cursor-pointer">
           Berakfast
         </li>
-        <li className="py-3 px-6 border border-zinc-900 rounded-3xl">Lunch</li>
-        <li className="py-3 px-6 border border-zinc-900 rounded-3xl">Dinner</li>
-        <li className="py-3 px-6 border border-zinc-900 rounded-3xl">Desert</li>
-        <li className="py-3 px-6 border border-zinc-900 rounded-3xl">
+        <li className="py-3 px-6 border border-zinc-900 rounded-3xl cursor-pointer">Lunch</li>
+        <li className="py-3 px-6 border border-zinc-900 rounded-3xl cursor-pointer">Dinner</li>
+        <li className="py-3 px-6 border border-zinc-900 rounded-3xl cursor-pointer">Desert</li>
+        <li className="py-3 px-6 border border-zinc-900 rounded-3xl cursor-pointer">
           Quick Bite!
         </li>
       </ul>
