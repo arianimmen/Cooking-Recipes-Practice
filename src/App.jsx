@@ -2,16 +2,18 @@ import "./tailwind.css";
 import Header from "./components/Header";
 import RandomRecipes from "./components/RandomRecipes";
 import FoodCategory from "./components/FoodCategory";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className=" bg-orange-50 w-full h-full">
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 max-w-screen-2xl">
         <Header />
         <HeroImage />
         <RandomRecipes />
         <FoodCategory />
         <AboutUs />
+        <Footer />
       </div>
     </div>
   );
