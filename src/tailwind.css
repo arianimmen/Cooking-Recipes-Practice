@@ -749,14 +749,6 @@ video {
   max-width: 900px;
 }
 
-.max-w-screen-lg {
-  max-width: 1024px;
-}
-
-.max-w-screen-xl {
-  max-width: 1280px;
-}
-
 .max-w-screen-2xl {
   max-width: 1536px;
 }
@@ -904,11 +896,6 @@ video {
 .bg-zinc-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
-}
-
-.bg-purple-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(168 85 247 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50 {

@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function Header() {
   return (
     <div className="mb-4">
@@ -48,12 +50,46 @@ function Header() {
         {/* Nav-bar */}
         <div className="hidden md:block ">
           <ul className="flex justify-between text-sm text-zinc-400">
-            <li className="cursor-pointer border-b-2 border-orange-600 text-zinc-900">
-              Home
+            <li className="cursor-pointer ">
+              <NavLink
+                to=""
+                className={({ isActive }) =>
+                  isActive ? "border-b-2 border-orange-600 text-zinc-900" : ""
+                }
+              >
+                Home
+              </NavLink>
             </li>
-            <li className="cursor-pointer ml-6">Recipes</li>
-            <li className="cursor-pointer ml-6">Cooking tips</li>
-            <li className="cursor-pointer ml-6">About us</li>
+            <li className="cursor-pointer ml-6">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-2 border-orange-600 text-zinc-900" : ""
+                }
+                to="recipes"
+              >
+                Recipes
+              </NavLink>
+            </li>
+            <li className="cursor-pointer ml-6">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-2 border-orange-600 text-zinc-900" : ""
+                }
+                to="cookingtips"
+              >
+                Cooking tips
+              </NavLink>
+            </li>
+            <li className="cursor-pointer ml-6">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-2 border-orange-600 text-zinc-900" : ""
+                }
+                to="aboutus"
+              >
+                About Us
+              </NavLink>
+            </li>
           </ul>
         </div>
         {/* Search-Icon  */}
