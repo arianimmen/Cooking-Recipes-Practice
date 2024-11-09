@@ -7,7 +7,7 @@ function Home() {
       <HeroImage />
       <RandomRecipes />
       <FoodCategory />
-      <AboutUs />;
+      <AboutUs />
     </>
   );
 }
