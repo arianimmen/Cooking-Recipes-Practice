@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import FoodItem from "./FoodItem"; // Importing the FoodItem component to display individual food items
 import { useEffect } from "react"; // Importing useEffect hook for side effects
 import { getAsyncRandomFoods } from "../features/randomFoods/randomFoodsSlice"; // Importing the async action to fetch random foods
+import toast from "react-hot-toast/headless";
 
 function RandomRecipes() {
   // Using useSelector to access the state of randomFoods from the Redux store
@@ -16,8 +17,12 @@ function RandomRecipes() {
   }, [dispatch]); // Dependency array ensures the effect runs only when dispatch is updated
 
   // If the loading state is true or there's an error, display an error message
-  if (loading || error !== "") {
+  if (loading) {
+    toast.error("This is an error!");
     return <div>error</div>;
+  }
+  if (error !== "") {
+    return;
   }
 
   return (
