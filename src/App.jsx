@@ -6,6 +6,7 @@ import Home from "./pages/Home"; // Importing the Home page component
 import Recipes from "./pages/Recipes"; // Importing the Recipes page component
 import AboutUs from "./pages/AboutUs"; // Importing the About Us page component
 import CookingTips from "./pages/CookingTips"; // Importing the Cooking Tips page component
+import RecipeSingleItem from "./components/RecipeSingleItem";
 
 // Main App component: responsible for rendering the routes and layout of the application
 function App() {
@@ -18,6 +19,7 @@ function App() {
           {/* Defining nested routes within the Layout component */}
           <Route index element={<Home />} /> {/* Default route (home page) */}
           <Route path="recipes" element={<Recipes />} />
+          <Route path="recipes/:id" element={<RecipeSingleItem />} />
           {/* Route for the Recipes page */}
           <Route path="cookingtips" element={<CookingTips />} />
           {/* Route for the Cooking Tips page */}

@@ -21,8 +21,6 @@ function FoodCategory() {
     dispatch(getAsyncCategoryFoods({ number: 3, type: foodType })); // Fetches 3 recipes based on selected food type
   }, [dispatch, foodType]); // Dependency array ensures this effect runs when dispatch or foodType changes
 
-  // Render loading spinner if the data is being fetched
-
   return (
     <div>
       {/* Title Section */}

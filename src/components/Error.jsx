@@ -1,9 +1,8 @@
 function Error({ error = "" }) {
   return (
-    <div className="flex flex-col items-center justify-center mb-16">
+    <div className="flex flex-col items-center justify-center mb-16 text-center">
       <svg
-        width="432"
-        height="400"
+        className="size-52 md:size-80"
         viewBox="0 0 232 200"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -64,21 +63,23 @@ function Error({ error = "" }) {
         />
         <path
           d="M53.4038 75.5962L59.4038 81.5962M59.4038 75.5962L53.4038 81.5962L59.4038 75.5962Z"
-          stroke="#FDEEEE"
+          stroke="#FF6E6F"
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M67 69C68.6569 69 70 67.6569 70 66C70 64.3431 68.6569 63 67 63C65.3431 63 64 64.3431 64 66C64 67.6569 65.3431 69 67 69Z"
-          fill="#FDEEEE"
+          fill="#FF6E6F"
         />
       </svg>
 
-      <p className="font-bold text-3xl relative bottom-16">
-        Something Went Wrong!
+      <p className="font-bold md:text-3xl text-lg relative bottom-10 md:bottom-16">
+        Something went Wrong!
       </p>
-      <p className="text-lg relative bottom-7">{error}</p>
+      <p className="text-sm bottom-5 md:text-lg relative md:bottom-7">
+        {error}
+      </p>
     </div>
   );
 }
