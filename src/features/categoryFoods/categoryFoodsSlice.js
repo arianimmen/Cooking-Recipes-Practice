@@ -25,7 +25,7 @@ export const getAsyncCategoryFoods = createAsyncThunk(
       return response.data.recipes; // Return the recipes data on success
     } catch (error) {
       // Reject with an error message if the request fails
-      return rejectWithValue(error.message);
+      return rejectWithValue(error.response.data.message);
     }
   }
 );

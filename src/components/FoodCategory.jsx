@@ -3,6 +3,8 @@ import { useEffect, useState } from "react"; // useEffect for side effects, useS
 import FoodItem from "./FoodItem"; // Component to display individual food items
 import { useDispatch, useSelector } from "react-redux"; // Hooks for interacting with the Redux store
 import { getAsyncCategoryFoods } from "../features/categoryFoods/categoryFoodsSlice.js"; // Thunk action to fetch category-specific foods
+import { OrbitProgress } from "react-loading-indicators";
+import Error from "./Error.jsx";
 
 function FoodCategory() {
   // Local state to track the selected food type
@@ -20,17 +22,6 @@ function FoodCategory() {
   }, [dispatch, foodType]); // Dependency array ensures this effect runs when dispatch or foodType changes
 
   // Render loading spinner if the data is being fetched
-  if (loading) {
-    return (
-      <button type="button" className="bg-indigo-500 ..." disabled>
-        <svg
-          className="animate-spin h-5 w-5 mr-3 ..."
-          viewBox="0 0 24 24"
-        ></svg>
-        Processing...
-      </button>
-    );
-  }
 
   return (
     <div>
@@ -108,12 +99,20 @@ function FoodCategory() {
         </li>
       </ul>
       {/* Display Foods */}
-      <div className="flex flex-col md:flex-row md:gap-x-4">
-        {/* Mapping over the foods array to display each item */}
-        {foods.map((item) => (
-          <FoodItem {...item} key={item.id} /> // Passing food details as props to FoodItem component
-        ))}
-      </div>
+      {loading ? (
+        <div className="flex justify-center mb-10">
+          <OrbitProgress color="#F67172" size="medium" text="" textColor="" />
+        </div>
+      ) : error ? (
+        <Error error={error} />
+      ) : (
+        <div className="flex flex-col md:flex-row md:gap-x-4">
+          {/* Mapping over the foods array to display each item */}
+          {foods.map((item) => (
+            <FoodItem {...item} key={item.id} /> // Passing food details as props to FoodItem component
+          ))}
+        </div>
+      )}
     </div>
   );
 }

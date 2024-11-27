@@ -3,6 +3,8 @@ import FoodItem from "./FoodItem"; // Importing the FoodItem component to displa
 import { useEffect } from "react"; // Importing useEffect hook for side effects
 import { getAsyncRandomFoods } from "../features/randomFoods/randomFoodsSlice"; // Importing the async action to fetch random foods
 import toast from "react-hot-toast/headless";
+import { OrbitProgress } from "react-loading-indicators";
+import Error from "./Error";
 
 function RandomRecipes() {
   // Using useSelector to access the state of randomFoods from the Redux store
@@ -17,13 +19,14 @@ function RandomRecipes() {
   }, [dispatch]); // Dependency array ensures the effect runs only when dispatch is updated
 
   // If the loading state is true or there's an error, display an error message
-  if (loading) {
-    toast.error("This is an error!");
-    return <div>error</div>;
-  }
-  if (error !== "") {
-    return;
-  }
+
+  // if (loading) {
+  //   toast.error("This is an error!");
+  //   ;
+  // }
+  // if (error !== "") {
+  //   return;
+  // }
 
   return (
     <div className="px-4 pt-10 border rounded-3xl border-zinc-300 mb-16">
@@ -32,13 +35,19 @@ function RandomRecipes() {
         Random Recipes
       </h2>
 
-      {/* Recipes container displaying food items in a flexible layout */}
-      <div className="flex flex-col md:flex-row md:gap-x-4">
-        {/* Mapping over foods array to display each FoodItem */}
-        {foods.map((item) => (
-          <FoodItem {...item} key={item.id} /> // Passing props to FoodItem component
-        ))}
-      </div>
+      {loading ? (
+        <div className="flex justify-center mb-10">
+          <OrbitProgress color="#F67172" size="medium" text="" textColor="" />
+        </div>
+      ) : error ? (
+        <Error error={error} />
+      ) : (
+        <div className="flex flex-col md:flex-row md:gap-x-4">
+          {foods.map((item) => (
+            <FoodItem {...item} key={item.id} /> // Passing props to FoodItem component
+          ))}
+        </div>
+      )}
     </div>
   );
 }
