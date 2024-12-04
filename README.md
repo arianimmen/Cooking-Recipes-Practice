@@ -1,1 +1,3 @@
-In the developing phase! :)
+# Recipes-Cooking Website
+### Project Status  
+🚧 **In Progress**  
