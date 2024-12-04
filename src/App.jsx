@@ -1,5 +1,3 @@
-import "./tailwind.css"; // Importing Tailwind CSS styles for styling the app
-
 import { Route, Routes } from "react-router-dom"; // Importing Route and Routes components from react-router-dom for routing
 import Layout from "./components/Layout"; // Importing Layout component for the main layout of the app
 import Home from "./pages/Home"; // Importing the Home page component

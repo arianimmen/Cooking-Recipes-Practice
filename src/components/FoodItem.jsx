@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 // Functional component to display individual food item details
-function FoodItem({ image, title, creditsText, readyInMinutes, servings }) {
+function FoodItem({ image, title, creditsText, readyInMinutes, servings ,id}) {
   const navigate = useNavigate();
   return (
     <div className="bg-white bg-opacity-50 mb-6 rounded-3xl border border-zinc-300 w-full">
@@ -38,7 +38,7 @@ function FoodItem({ image, title, creditsText, readyInMinutes, servings }) {
         {/* Button to view the recipe */}
         <button
           className="w-full border border-orange-950 rounded-3xl py-3"
-          onClick={() => navigate("recipes/243")}
+          onClick={() => navigate(`recipes/${id}`)}
         >
           View Recipe
         </button>

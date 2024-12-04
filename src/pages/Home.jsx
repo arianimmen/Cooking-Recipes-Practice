@@ -38,7 +38,7 @@ function HeroImage() {
       </div>
       {/* Hero image displayed as background */}
       <img
-        src="./src/assets/images/Hero  Section (1).png"  // Image source
+        src="/images/Hero  Section (1).png"  // Image source
         className="w-full object-cover object-bottom h-[577px] rounded-3xl"
         alt="hero-image"  // Alt text for the image
       />
@@ -77,7 +77,7 @@ function AboutUs() {
         {/* Image 1 in the about us section */}
         <img
           className="h-72 w-full object-cover rounded-2xl lg:h-full lg:w-auto overflow-hidden"
-          src="./src/assets/images/Recipe Card.png"  // Image source
+          src="/images/Recipe Card.png"  // Image source
           alt=""  // Alt text for the image
         />
       </div>
@@ -86,7 +86,7 @@ function AboutUs() {
       <div className="lg:order-2">
         <img
           className="h-72 w-full object-cover rounded-2xl lg:h-full lg:w-auto "
-          src="./src/assets/images/Recipe Card (1).png"  // Image source
+          src="/images/Recipe Card (1).png"  // Image source
           alt=""  // Alt text for the image
         />
       </div>
@@ -95,7 +95,7 @@ function AboutUs() {
       <div className="row-span-2 lg:order-1 ">
         <img
           className="h-72 w-full object-cover rounded-2xl lg:h-[680px] lg:w-full lg:object-top "
-          src="./src/assets/images/About us Image.png"  // Image source
+          src="/images/About us Image.png"  // Image source
           alt=""  // Alt text for the image
         />
       </div>

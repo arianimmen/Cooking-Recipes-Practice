@@ -44,7 +44,7 @@ function AboutUsMain() {
         {/* Section for the author's image */}
         <div className="mb-10">
           <img
-            src="./src/assets/images/Author Image.png" // Author image source
+            src="/images/Author Image.png" // Author image source
             alt="author images" // Alt text for the image
             className="rounded-xl w-full md:h-full md:object-cover" // Responsive styling for the image
           />
