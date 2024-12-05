@@ -16,29 +16,46 @@ function RecipeSingleItem() {
     dispatch(getAsyncSingleRecipeFood({ id: id }));
   }, [dispatch, id]);
 
+  console.log(foods);
+
   return (
     <div className="py-16 px-4 border rounded-3xl md:px-10 border-zinc-300 mb-16">
-      <RecipeSingleItemHeader />
+      <RecipeSingleItemHeader image={foods.image} title={foods.title} />
+
+      <div className="md:flex md:gap-x-12">
+        <div className="bg-white border border-zinc-300 rounded-3xl h-fit px-4 py-6 mt-4 md:order-2 lg:min-w-96  md:min-w-64  text-base md:text-x l">
+          <span className="text-red-400 ">Ingredients</span>
+          <ul>
+            {foods.extendedIngredients?.map((item, index) => (
+              <li key={index}>{item.original}</li>
+            ))}
+          </ul>
+        </div>
+        {/* Instruction */}
+        <div
+          className="prose md:text-xl max-w-none text-gray-700	mt-5 md:order-1 md:pt-6 px-3" // Tailwind classes for typography
+          dangerouslySetInnerHTML={{ __html: foods.instructions }}
+        />
+      </div>
     </div>
   );
 }
 
 export default RecipeSingleItem;
 
-function RecipeSingleItemHeader() {
+function RecipeSingleItemHeader({ image, title }) {
   return (
     <div className="flex flex-col items-center ">
       <span className="bg-red-400 text-white py-1 px-3 rounded-2xl text-sm mb-3 md:text-lg">
         Recipes
       </span>
       <h1 className="font-extrabold text-3xl text-center mb-3 md:text-7xl">
-        Lemon Garlic Roasted Chicken
+        {title}
       </h1>
       <p className="text-base text-center text-zinc-600 md:text-xl">
         Welcome to Cooks Delight, where culinary dreams come alive! Today, we
         embark on a journey of flavors with a dish that promises to elevate your
-        dining experience – our Citrus Infusion Delight: Lemon Garlic Roasted
-        Chicken.
+        dining experience – our Citrus Infusion Delight: {title}
       </p>
 
       {/* Cooking Inforamtion Summary */}
@@ -99,10 +116,10 @@ function RecipeSingleItemHeader() {
       </div>
 
       {/* Main Picture */}
-      <div className="w-full">
+      <div className="w-full ">
         <img
-          className="w-full object-cover "
-          src="/public/images/Hero  Section (1).png"
+          className="w-full object-cover rounded-md  md:max-h-[500px]"
+          src={image}
           alt="Main food Image"
         />
       </div>

@@ -2,3 +2,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.prose ol {
+  list-style-type: none;
+}
+.prose ol :first-child {
+  list-style-type: none;
+  font-weight: bold;
+  font-size: large;
+}
